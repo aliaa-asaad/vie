@@ -47,17 +47,29 @@ class _SplashScreenState extends State<SplashScreen>
       future: Future.delayed(
           const Duration(seconds: 3),
           () => AppRoutes.pushNamedNavigator(
-              routeName: Routes.home, context: context, replacement: true)),
+              routeName: Routes.onboarding, context: context, replacement: true)),
       builder: (context, _) => Scaffold(
-        body: Center(
-          child: ScaleTransition(
-            scale: animation,
-            child: SvgPicture.asset(
-              AppImages.logo,
-              height: MediaQueryHelper.height * 0.15,
-              width: MediaQueryHelper.width * 0.15,
-            ),
-          ),
+        body: Stack(
+          children:[ SizedBox(height: MediaQueryHelper.height,width: MediaQueryHelper.width,),
+          Positioned(right:MediaQueryHelper.width*-.9,
+            top:MediaQueryHelper.height*-.1,
+            child:Image.asset(AppImages.shape1)),
+            Positioned(left:MediaQueryHelper.width*-.7,
+            top:MediaQueryHelper.height*-.08,
+            child:Image.asset(AppImages.shape3)),
+             Positioned(left:MediaQueryHelper.width*-.1,
+            bottom:MediaQueryHelper.height*-.3,
+            child:Image.asset(AppImages.shape2)),
+            Center(
+              child: ScaleTransition(
+              scale: animation,
+              child: SvgPicture.asset(
+                AppImages.logo,
+                height: MediaQueryHelper.height * 0.15,
+                width: MediaQueryHelper.width * 0.15,
+              ),
+                      ),
+            ),]
         ),
       ),
     );

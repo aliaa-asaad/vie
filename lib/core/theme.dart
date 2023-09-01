@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTheme {
   ThemeData lightTheme = ThemeData(
+   
     iconTheme: const IconThemeData(color: Colors.black),
     scaffoldBackgroundColor: Colors.white,
     fontFamily: 'Cairo',

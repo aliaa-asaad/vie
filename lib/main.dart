@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmacy_app/features/drug_details/presentation/screens/drug_details.dart';
+import 'package:pharmacy_app/features/onboarding/screens/onboarding_screen.dart';
+import 'package:pharmacy_app/features/splash/splash_screen.dart';
 import 'package:pharmacy_app/routing/navigator.dart';
 import 'package:pharmacy_app/routing/routes.dart';
 
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
         AppLocale.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        /* GlobalCupertinoLocalizations.delegate, */
+         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
         Locale('en', ''), // English, no country code
@@ -54,7 +56,7 @@ class MyApp extends StatelessWidget {
         }
         return supportedLocales.first;
       },
-      home: const CustomNavigationBar(),
+      home: const SplashScreen(),
     );
   }
 }

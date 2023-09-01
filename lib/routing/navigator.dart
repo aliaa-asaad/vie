@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pharmacy_app/features/authentication/presentation/screens/sign_up.dart';
 import 'package:pharmacy_app/features/drug_details/presentation/screens/drug_details.dart';
 import 'package:pharmacy_app/features/chat/presentation/screens/chat_screen.dart';
 import 'package:pharmacy_app/features/more/presentation/screens/more_screen.dart';
@@ -6,6 +7,7 @@ import 'package:pharmacy_app/features/navigation_bar/navigation_bar.dart';
 import 'package:pharmacy_app/features/search/presentation/screens/search_screen.dart';
 import 'package:pharmacy_app/routing/routes.dart';
 
+import '../features/authentication/presentation/screens/log_in.dart';
 import '../features/cart/presentation/screens/cart_screen.dart';
 import '../features/home/presentation/screens/home_screen.dart';
 import '../features/notification/presentation/screens/notification_screen.dart';
@@ -43,9 +45,13 @@ class AppRoutes {
         return AppRoutes.aniamtedNavigation(screen: const ChatScreen());
          case Routes.drugDetails:
         return AppRoutes.aniamtedNavigation(screen: const DrugDetails());
-      /*  case Routes.login:
-        return MaterialPageRoute(builder: (context) => const LoginScreen());
-     case Routes.courseDetails:
+        case Routes.login:
+        return MaterialPageRoute(builder: (context) => const LogInScreen());
+         case Routes.signUp:
+        return MaterialPageRoute(builder: (context) => const SignUpScreen());
+        case Routes.onboarding:
+        return MaterialPageRoute(builder: (context) => const OnBoardingScreen());
+     /*case Routes.courseDetails:
         return AppRoutes.aniamtedNavigation(
             screen: const CourseDetailsScreen());
       case Routes.coursesCategories:
